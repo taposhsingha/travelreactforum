@@ -8,10 +8,10 @@ const TouristSpots = () => {
       <Navbar />
       <div className="flex flex-col pb-10">
         <h2 className="text-center text-lg mt-10 text-white">
-          You can search for communities for specific <br />
-          tourist spots here:
+          You can search for specific <br />
+          tourist locations posts here:
         </h2>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-8">
           <input type="text" className="px-1 w-[280px] rounded-md" />
           <button className="ml-5 bg-purple-500 p-1 rounded-md text-white">
             search

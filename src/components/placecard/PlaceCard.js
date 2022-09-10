@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const PlaceCard = (props) => {
+  const navigate = useNavigate();
+  const [placetitle, setPlaceTitle] = useState("");
+  useEffect(() => {
+    setPlaceTitle(props.title);
+  });
+  const handlesinglespot = () => {
+    navigate("/touristplaces/singlespots", { state: { placetitle } });
+  };
   return (
-    <div className="mt-5 w-12/12 border-solid border-[2px] rounded-md border-black flex flex-col">
+    <div
+      className="mt-5 w-12/12 border-solid border-[2px] rounded-md border-black flex flex-col"
+      onClick={handlesinglespot}
+    >
       <img
         src={props.img}
         alt="img"

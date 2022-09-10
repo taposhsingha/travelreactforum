@@ -6,6 +6,7 @@ import Login from "./pages/login/Login";
 import Home from "./pages/home/Home";
 import Register from "./pages/register/Register";
 import TouristSpots from "./pages/touristspots/TouristSpots";
+import SingleSpots from "./pages/singlespots/SingleSpots";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/touristplaces" element={<TouristSpots />} />
+        <Route path="/touristplaces/singlespots" element={<SingleSpots />} />
       </Routes>
     </BrowserRouter>
   );
